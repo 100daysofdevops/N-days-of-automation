@@ -25,5 +25,10 @@ To use the script, simply run the command :
 bash check_if_file_directory_present_2.sh
 ```
 
+## Shell script one liner
+```
+[ -e "$path" ] && [ -f "$path" ] && echo "$path is a file." || [ -d "$path" ] && echo "$path is a directory." || echo "$path does not exist."
+```
+
 ## Contributing
 Contributions to this script are welcome. If you find any bugs or have suggestions for improvement, feel free to open an issue or submit a pull request.
