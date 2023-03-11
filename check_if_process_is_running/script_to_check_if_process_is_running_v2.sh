@@ -17,5 +17,4 @@ function check_process {
   fi
 }
 
-check_process
-
+check_process "$1"
