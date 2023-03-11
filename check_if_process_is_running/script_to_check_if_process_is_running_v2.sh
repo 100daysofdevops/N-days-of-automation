@@ -17,6 +17,5 @@ function check_process {
   fi
 }
 
-# Example usage:
-check_process nginx
+check_process
 
