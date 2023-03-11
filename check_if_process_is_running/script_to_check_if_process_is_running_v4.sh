@@ -6,8 +6,8 @@ EMAIL_TO="you@example.com"
 EMAIL_FROM="alert@example.com"
 
 # Check if the user running the script is not root
-if [ "$(id -u)" != "0" ]; then
-  echo "This script must be run as root."
+if [ "$(id -u)" = "0" ]; then
+  echo "This script must not be run as root."
   exit 1
 fi
 
