@@ -25,5 +25,12 @@ The input file should be a text file containing one server name or IP address pe
 google.com
 ```
 
+## Shell one-liner
+
+```
+ping -c 1 SERVER_IP_ADDRESS >/dev/null && echo "Server is up" || echo "Server is down"
+
+```
+
 ## Contributing
 Contributions to this script are welcome. If you find any bugs or have suggestions for improvement, feel free to open an issue or submit a pull request.
