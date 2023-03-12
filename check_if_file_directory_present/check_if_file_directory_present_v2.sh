@@ -18,10 +18,9 @@ check_file_or_dir(){
     return 2
     fi  
 
-    if [ -r "$1" ]
+    if [ ! -r "$1" ]
     then
         echo "You don't have a permission to read $1"
-        return 3
     fi    
 }
 
