@@ -22,5 +22,11 @@ bash script_to_check_if_process_is_running_v2.sh nginx
 
 If the process is running, the script will output a success message indicating that the process is running. If the process is not running, the script will output an error message indicating that the process is not running.
 
+## Shell one-liner
+
+```
+systemctl is-active --quiet process_name || (systemctl restart process_name && systemctl is-active process_name || echo "Failed to start process_name" | mail -s "Process Restart Failed" reciever@example.com)
+```
+
 ## Contributing
 Contributions to this script are welcome. If you find any bugs or have suggestions for improvement, feel free to open an issue or submit a pull request.
