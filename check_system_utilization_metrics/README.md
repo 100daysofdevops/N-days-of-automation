@@ -1,6 +1,4 @@
-# Foobar
-
-Memory Utilization Check Shell Script
+# Memory Utilization Check Shell Script
 
 This shell script calculates the memory utilization of a Linux system by subtracting the free, shared, and buffer cache memory from the total memory. If the memory utilization exceeds the threshold (default: 70%), the script will also send an email alert to the specified recipient.
 
