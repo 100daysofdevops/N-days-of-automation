@@ -30,7 +30,7 @@ read -p "Enter the name of file or directory (press enter for current directory)
 # Use current directory if user input is empty
 if [ -z "$input_file_or_dir" ]
 then
-    input_file_or_dir="."
+    input_file_or_dir=$(pwd)
 fi
 
 # Call the function with the user input
