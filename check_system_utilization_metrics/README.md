@@ -5,8 +5,8 @@ This shell script calculates the memory utilization of a Linux system by subtrac
 ## Requirements
 
 ```
-Bash shell
-mail command (for email alerts)
+1. Bash shell
+2. mail command (for email alerts)
 ```
 
 ## Usage
