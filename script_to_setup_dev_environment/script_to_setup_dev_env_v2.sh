@@ -1,7 +1,7 @@
 #!/bin/bash
 # This shell script that checks if the required python modules (pip3, boto3, and awscli)
 # the terraform package are installed, and installs them if they are missing. 
-# This script should work on both CentOS and macOS
+# This script should work on both CentOS, Ubuntu and macOS
 # Check the terraform release page to use the latest terraform package https://releases.hashicorp.com/terraform/
 
 # Define Terraform version
