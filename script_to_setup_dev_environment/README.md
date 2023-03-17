@@ -15,7 +15,7 @@ git clone git@github.com:<username>/N-days-of-automation.git
 
 ```
 cd N-days-of-automation/script_to_setup_dev_environment
-bash script_to_setup_dev_env_v1.sh
+bash script_to_setup_dev_env_v2.sh
 ```
 
 ## Contributing
