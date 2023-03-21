@@ -22,7 +22,7 @@ pip install -r requirements.txt
 Run the script by passing an EBS volume ID as an argument:
 
 ```
-python cleanup_unused_ebs_vol.py vol-1234567890abcdef0
+python cleanup_unused_ebs_vol_v2.py vol-1234567890abcdef0
 ```
 
 ## Contributing
