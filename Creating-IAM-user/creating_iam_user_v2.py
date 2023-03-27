@@ -1,4 +1,6 @@
 import boto3
+import argparse
+import sys
 
 def create_iam_user(username):
     iam = boto3.client("iam")
@@ -15,6 +17,13 @@ def create_iam_user(username):
             print(f"Error creating {username}: {e}")
 
 
-username=input("Please enter a IAM user you want to create: ")
-create_iam_user(username)                   
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="Creating an IAM user")
+    parser.add_argument('--username', type=str, help="The name of the IAM user, user want to create")
+    args = parser.parse_args()
+    if not any(vars(args).values()):
+        parser.print_help()
+        sys.exit()    
+
+    create_iam_user(args.username)               
 
