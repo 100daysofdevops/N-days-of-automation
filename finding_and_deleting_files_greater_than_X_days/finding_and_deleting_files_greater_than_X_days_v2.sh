@@ -1,12 +1,6 @@
 #!/usr/bin/env bash
 
 delete_old_files() {
-  # Verify for required arguments
-  if [ "$#" -ne 2 ]; then
-    echo "Error: incorrect number of arguments"
-    echo "Usage: $0 <directory_path> <days_old>"
-    exit 1
-  fi
 
   # Prompt user to enter directory and number of days from the command line arguments
   directory="$1"
