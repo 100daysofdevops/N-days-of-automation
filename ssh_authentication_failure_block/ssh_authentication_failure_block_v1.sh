@@ -7,9 +7,16 @@ install_firewall_mailx() {
     # Check if the following packages are installed
     for package in "${packages[@]}"; do
         if ! command -v "$package" >/dev/null 2>&1; then
+        
             # If the package is not installed, install it
-            if ! sudo yum -y install "$package" || ! sudo apt-get update && sudo apt-get -y install "$package"; then
-                echo "Failed to install $package"
+            if [[ -f /etc/redhat-release ]]; then
+                sudo yum -y update && sudo yum -y install "$package" 
+                
+            elif [[ -f /etc/lsb-release ]]; then
+                sudo apt-get update && sudo apt-get -y install "$package"; 
+                
+            else
+                echo "Failed to install $package, please install manually!"
                 exit 1
             fi
         fi
