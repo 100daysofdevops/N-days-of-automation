@@ -4,10 +4,8 @@ check_server_up(){
 # Perform a check to see if the server is reachable on the specified port
 if nc -z -w1 "$1" "$2" >/dev/null 2>&1
 then
-    echo "Server $1 is up and running"
     return 0
 else
-    echo "Server $1 is down or unreachable"
     return 1
 fi        
 }
