@@ -3,10 +3,6 @@
 set -euo pipefail
 
 backup_to_remote_server() {
-  if [[ $# -ne 3 ]]; then
-    echo "Usage: $0  <directory_to_backup> <remote_server_user> <remote_server>"
-    return 1
-  fi
 
   local readonly DIRECTORY_TO_BACKUP="$1"
   local readonly REMOTE_SERVER_USER="$2"
